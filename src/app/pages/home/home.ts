@@ -10,6 +10,8 @@ import { Product, PRODUCTS } from '../products/products.data';
   styleUrl: './home.css',
 })
 export class Home {
+  heroBackgroundImage = "url('img/banner1.webp')";
+
   featuredProducts: Product[] = PRODUCTS.filter((product) =>
     ['sport-r-series-600', 'adventure-explorer-x'].includes(product.id),
   );

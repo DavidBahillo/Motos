@@ -22,7 +22,7 @@ export const PRODUCTS: Product[] = [
     longDescription:
       'Una superdeportiva equilibrada para quienes buscan sensaciones de circuito en uso diario. Su chasis ligero y su electrónica de asistencia te permiten atacar curvas con precisión y seguridad.',
     price: '8.999 €',
-    image: '/img/moto1.jfif',
+    image: 'img/moto1.jfif',
     alt: 'Moto Deportiva R-Series',
     badge: 'Novedad',
     engine: '4 cilindros, 599 cc',
@@ -38,7 +38,7 @@ export const PRODUCTS: Product[] = [
     longDescription:
       'Preparada para aventura real, con postura cómoda, gran autonomía y suspensiones de largo recorrido. Perfecta para enlazar autopista, puertos de montaña y tramos de tierra sin esfuerzo.',
     price: '11.450 €',
-    image: '/img/moto2.jpeg',
+    image: 'img/moto2.jpeg',
     alt: 'Moto Adventure Explorer',
     engine: 'Bicilíndrico, 890 cc',
     power: '105 CV',
@@ -53,7 +53,7 @@ export const PRODUCTS: Product[] = [
     longDescription:
       'Un scooter urbano pensado para el día a día. Bajo consumo, mantenimiento sencillo y excelente maniobrabilidad para moverte con rapidez por ciudad con máximo confort.',
     price: '3.200 €',
-    image: '/img/moto3.jpg',
+    image: 'img/moto3.jpg',
     alt: 'Scooter Urban City',
     engine: 'Monocilíndrico, 125 cc',
     power: '12 CV',
@@ -68,7 +68,7 @@ export const PRODUCTS: Product[] = [
     longDescription:
       'Una naked polivalente con gran respuesta en medios y parte ciclo ágil. Disfruta de aceleración contundente y control total tanto en trayectos cortos como en escapadas de fin de semana.',
     price: '7.450 €',
-    image: '/img/moto4.jpg',
+    image: 'img/moto4.jpg',
     alt: 'Moto Naked Streetfighter',
     engine: 'Bicilíndrico, 689 cc',
     power: '74 CV',
@@ -83,7 +83,7 @@ export const PRODUCTS: Product[] = [
     longDescription:
       'Cruiser de carácter con ergonomía relajada y gran estabilidad en carretera. Ideal para rutas largas gracias a su entrega suave de potencia y su asiento confortable para piloto y pasajero.',
     price: '9.980 €',
-    image: '/img/moto5.jpg',
+    image: 'img/moto5.jpg',
     alt: 'Moto Custom Cruiser',
     engine: 'V-Twin, 900 cc',
     power: '68 CV',
