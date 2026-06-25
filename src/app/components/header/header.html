@@ -1,0 +1,23 @@
+<header>
+  <nav>
+    <!-- Logo o Nombre de la marca -->
+    <div class="logo">
+      <a routerLink="/" (click)="closeMenu()">Motos S.L</a>
+    </div>
+
+    <!-- Botón Hamburguesa (Solo se verá en móviles) -->
+    <button class="menu-toggle" (click)="toggleMenu()" [class.open]="isMenuOpen" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Menú de navegación -->
+    <ul [class.open]="isMenuOpen">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Inicio</a></li>
+      <li><a routerLink="/nosotros" routerLinkActive="active" (click)="closeMenu()">Nosotros</a></li>
+      <li><a routerLink="/productos" routerLinkActive="active" (click)="closeMenu()">Productos</a></li>
+      <li><a routerLink="/contacto" routerLinkActive="active" (click)="closeMenu()">Contacto</a></li>
+    </ul>
+  </nav>
+</header>

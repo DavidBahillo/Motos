@@ -1,0 +1,33 @@
+<section class="detail-container" *ngIf="product; else notFound">
+  <a routerLink="/productos" class="back-link">Volver al catálogo</a>
+
+  <article class="detail-card">
+    <div class="detail-image">
+      <img [src]="product.image" [alt]="product.alt" />
+      <span class="detail-badge" *ngIf="product.badge">{{ product.badge }}</span>
+    </div>
+
+    <div class="detail-info">
+      <h2>{{ product.name }}</h2>
+      <p class="detail-price">{{ product.price }}</p>
+      <p class="detail-description">{{ product.longDescription }}</p>
+
+      <ul class="detail-specs">
+        <li><strong>Motor:</strong> {{ product.engine }}</li>
+        <li><strong>Potencia:</strong> {{ product.power }}</li>
+        <li><strong>Peso:</strong> {{ product.weight }}</li>
+        <li><strong>Altura de asiento:</strong> {{ product.seatHeight }}</li>
+      </ul>
+
+      <a routerLink="/contacto" class="btn-contact">Solicitar información</a>
+    </div>
+  </article>
+</section>
+
+<ng-template #notFound>
+  <section class="not-found">
+    <h2>Moto no encontrada</h2>
+    <p>La moto que intentas ver no existe o ya no está disponible.</p>
+    <a routerLink="/productos" class="btn-back">Volver a productos</a>
+  </section>
+</ng-template>

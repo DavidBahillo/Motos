@@ -1,0 +1,63 @@
+.legal-container {
+  max-width: 800px; /* Ancho optimizado para lectura de documentos */
+  margin: 50px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #333333;
+  line-height: 1.7;
+}
+
+.legal-container h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.legal-date {
+  font-size: 0.9rem;
+  color: #777777;
+  font-style: italic;
+  margin-bottom: 40px;
+  display: block;
+}
+
+.legal-container section {
+  margin-bottom: 35px;
+}
+
+.legal-container h2 {
+  font-size: 1.4rem;
+  color: #1a1a1a;
+  border-bottom: 2px solid #ffc107; /* Línea amarilla sutil corporativa */
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+}
+
+.legal-container p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+}
+
+.legal-container ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.legal-container ul li {
+  margin-bottom: 8px;
+  font-size: 1.02rem;
+}
+
+.legal-container strong {
+  color: #1a1a1a;
+}
+
+/* Ajuste móvil */
+@media (max-width: 600px) {
+  .legal-container {
+    margin: 30px auto;
+  }
+  .legal-container h1 {
+    font-size: 2rem;
+  }
+}

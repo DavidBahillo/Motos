@@ -1,0 +1,142 @@
+/* Contenedor General */
+.products-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Línea decorativa debajo del título */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #ffc107; /* El amarillo de Motos S.L. */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* La Cuadrícula de Productos (Responsiva automática) */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Estilo de cada Tarjeta de Producto */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Efecto al pasar el ratón por encima de la tarjeta */
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Etiqueta flotante (Ej: Novedad) */
+.product-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #ff3b30;
+  color: white;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 20px;
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+/* Contenedor de la Imagen */
+.product-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen encaje sin deformarse */
+  transition: transform 0.5s ease;
+}
+
+/* Zoom suave en la imagen al hacer hover */
+.product-card:hover .product-image img {
+  transform: scale(1.08);
+}
+
+/* Información del producto */
+.product-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Empuja el footer hacia abajo para que queden alineados */
+}
+
+.product-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+  color: #1a1a1a;
+}
+
+.product-description {
+  font-size: 0.95rem;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+/* Parte inferior de la tarjeta (Precio + Botón) */
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.product-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* Botón de Detalles */
+.btn-details {
+  display: inline-block;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-details:hover {
+  background-color: #ffc107; /* Pasa a amarillo motero al hacer hover */
+  color: #1a1a1a;
+}

@@ -1,0 +1,119 @@
+<section class="contact-container">
+  <div class="contact-header">
+    <h2>Contacta con Nosotros</h2>
+    <p>¿Tienes dudas sobre una moto, necesitas cita en el taller o quieres un presupuesto? Escríbenos o ven a visitarnos.</p>
+  </div>
+
+  <div class="contact-grid">
+    <!-- Columna Izquierda: Formulario -->
+    <div class="contact-form-wrapper">
+      <h3>Envíanos un mensaje</h3>
+      <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-group">
+          <label for="name">Nombre Completo</label>
+          <input
+            type="text"
+            id="name"
+            formControlName="name"
+            placeholder="Tu nombre y apellidos"
+            [class.invalid]="hasError('name', 'required') || hasError('name', 'minlength')"
+          >
+          <small class="error" *ngIf="hasError('name', 'required')">El nombre es obligatorio.</small>
+          <small class="error" *ngIf="hasError('name', 'minlength')">Debe tener al menos 3 caracteres.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            placeholder="ejemplo@correo.com"
+            [class.invalid]="hasError('email', 'required') || hasError('email', 'email')"
+          >
+          <small class="error" *ngIf="hasError('email', 'required')">El correo es obligatorio.</small>
+          <small class="error" *ngIf="hasError('email', 'email')">Introduce un correo valido.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Asunto</label>
+          <select id="subject" formControlName="subject">
+            <option value="ventas">Información sobre Motos / Ventas</option>
+            <option value="taller">Cita para Taller / Reparaciones</option>
+            <option value="recambios">Accesorios y Recambios</option>
+            <option value="otros">Otras consultas</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea
+            id="message"
+            rows="5"
+            formControlName="message"
+            placeholder="Cuéntanos en qué podemos ayudarte..."
+            [class.invalid]="hasError('message', 'required') || hasError('message', 'minlength')"
+          ></textarea>
+          <small class="error" *ngIf="hasError('message', 'required')">El mensaje es obligatorio.</small>
+          <small class="error" *ngIf="hasError('message', 'minlength')">Debe tener al menos 10 caracteres.</small>
+        </div>
+
+        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+        <p class="form-feedback" *ngIf="feedbackMessage">{{ feedbackMessage }}</p>
+      </form>
+    </div>
+
+    <!-- Columna Derecha: Info + Mapa -->
+    <div class="contact-info-wrapper">
+      <h3>Datos de Contacto</h3>
+
+      <div class="info-items">
+        <div class="info-item">
+          <span class="icon">📍</span>
+          <div>
+            <h4>Dirección</h4>
+            <p>Calle Mayor, 42, 34001 Palencia, España</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="icon">📞</span>
+          <div>
+            <h4>Teléfono</h4>
+            <p>+34 979 123 456</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="icon">✉️</span>
+          <div>
+            <h4>Email</h4>
+            <p>contacto&#64;motossl.com</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="icon">🕒</span>
+          <div>
+            <h4>Horario</h4>
+            <p>Lunes a Viernes: 9:00 - 14:00 y 16:00 - 20:00<br>Sábados: 10:00 - 13:30</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenedor del Mapa -->
+      <div class="map-container">
+        <!-- Mapa incrustado real de la Calle Mayor de Palencia -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2957.9479326343515!2d-4.5315865!3d42.0013583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd465cf23dfbc9ff%3A0x67db233152648834!2sC.%20Mayor%2C%2034001%20Palencia!5e0!3m2!1ses!2ses!4v1710000000000!5m2!1ses!2ses"
+          width="100%"
+          height="250"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>

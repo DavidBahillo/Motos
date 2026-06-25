@@ -1,0 +1,292 @@
+/* --- REUTILIZABLE --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666666;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+
+/* --- 1. HERO BANNER (Estilos actualizados) --- */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  background-image: url('/img/banner1.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.hero-banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-align: center;
+  max-width: 800px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffc107;
+}
+
+.hero-content p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.hero-content .thanks {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #ffc107;
+  margin-bottom: 2rem;
+}
+
+.btn-hero {
+  display: inline-block;
+  background-color: #ffc107;
+  color: #1a1a1a;
+  text-decoration: none;
+  padding: 14px 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 30px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-hero:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+}
+
+
+/* --- 2. CATEGORÍAS RÁPIDAS --- */
+.categories-section {
+  background-color: #1a1a1a;
+  padding: 40px 0;
+}
+
+.categories-section .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.category-card {
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  min-width: 200px;
+}
+
+.cat-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.category-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.category-card a {
+  color: #ffc107;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.category-card a:hover {
+  text-decoration: underline;
+}
+
+
+/* --- 3. PRODUCTOS DESTACADOS --- */
+.featured-products {
+  padding: 80px 0;
+  background-color: #fdfdfd;
+}
+
+/* Reutilizando la Grid que rinde muy bien en responsivo */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 900px; /* Al ser solo 2 destacados, limitamos el ancho para que no se estiren de más */
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.product-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: white;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 20px;
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+.product-badge.premium { background-color: #007bff; }
+.product-badge.oferta { background-color: #e1306c; }
+
+.product-image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 25px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.product-info h3 { margin: 0 0 10px 0; font-size: 1.4rem; color: #1a1a1a; }
+.product-description { color: #666666; font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px; }
+
+.product-footer { display: flex; justify-content: space-between; align-items: center; }
+.product-price { font-size: 1.5rem; font-weight: 700; color: #1a1a1a; }
+
+.btn-details {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-details:hover { background-color: #ffc107; color: #1a1a1a; }
+
+.view-all-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid #1a1a1a;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.btn-outline:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+
+/* --- 4. LLAMADA A LA ACCIÓN (CTA) --- */
+.cta-section {
+  background-color: #ffc107;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.cta-content h2 {
+  font-size: 2.2rem;
+  color: #1a1a1a;
+  margin: 0 0 10px 0;
+  font-weight: 800;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  color: #333333;
+  margin: 0 0 25px 0;
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 32px;
+  font-weight: 700;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.btn-cta:hover {
+  background-color: #333333;
+}
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 2.2rem; }
+  .hero-content p { font-size: 1rem; }
+  .categories-section .container { flex-direction: column; align-items: center; gap: 30px; }
+  .section-title { font-size: 2rem; }
+  .cta-content h2 { font-size: 1.8rem; }
+}

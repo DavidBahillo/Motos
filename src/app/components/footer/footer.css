@@ -1,0 +1,137 @@
+/* Contenedor Principal del Footer */
+.main-footer {
+  background-color: #111111; /* Negro profundo */
+  color: #b3b3b3; /* Letras grises para que sea agradable a la vista */
+  padding: 60px 20px 30px 20px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  border-top: 3px solid #ffc107; /* Línea de acento amarilla de Motos S.L. */
+}
+
+/* Distribución en rejilla adaptable */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr; /* La de marca y redes son un poco más anchas */
+  gap: 40px;
+}
+
+/* Estilo general para los títulos de columnas */
+.footer-column h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+}
+
+.footer-column h4 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-column p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 15px 0;
+}
+
+/* Listas de Enlaces (Navegación y Legales) */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  display: inline-block;
+}
+
+/* Efecto hover en los enlaces */
+.footer-column ul li a:hover {
+  color: #ffc107; /* Cambia a amarillo */
+  padding-left: 5px; /* Pequeño desplazamiento dinámico */
+}
+
+/* Copyright apartado */
+.copyright {
+  font-size: 0.85rem !important;
+  margin-top: 30px !important;
+  opacity: 0.6;
+}
+
+/* --- BLOQUE DE REDES SOCIALES --- */
+.social-media p {
+  font-size: 0.9rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  background-color: #222222;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efectos de color específicos por Red Social */
+.social-icons a.icon-fb:hover {
+  background-color: #1877f2; /* Azul Facebook */
+  transform: translateY(-3px);
+}
+
+.social-icons a.icon-ig:hover {
+  background-color: #e1306c; /* Rosa/Rojo Instagram */
+  transform: translateY(-3px);
+}
+
+.social-icons a.icon-yt:hover {
+  background-color: #ff0000; /* Rojo YouTube */
+  transform: translateY(-3px);
+}
+
+.social-icons svg {
+  transition: fill 0.3s ease;
+}
+
+/* --- RESPONSIVE (Tablets y Móviles) --- */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr; /* 2 columnas en tablets */
+    gap: 30px;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* 1 sola columna en pantallas móviles */
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center; /* Centra los iconos de redes en móvil */
+  }
+
+  .footer-column ul li a:hover {
+    padding-left: 0; /* Desactivamos el desplazamiento en móvil para que no descuadre */
+  }
+}

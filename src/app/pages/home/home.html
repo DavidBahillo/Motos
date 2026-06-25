@@ -1,0 +1,87 @@
+<!-- 1. HERO BANNER (Tu sección de bienvenida) -->
+<section class="hero-banner">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Bienvenido a Motos S.L.</h1>
+    <p>
+      En Motos S.L. nos apasionan las motocicletas y estamos comprometidos a ofrecerte la mejor
+      experiencia de compra. Explora nuestra amplia gama de motos, accesorios y servicios diseñados para
+      satisfacer todas tus necesidades sobre dos ruedas.
+    </p>
+    <p>
+      Ya sea que estés buscando tu primera moto, quieras actualizar tu equipo o necesites mantenimiento
+      para tu vehículo, en Motos S.L. encontrarás todo lo que necesitas. Nuestro equipo de expertos está
+      aquí para ayudarte a encontrar la moto perfecta y brindarte el mejor servicio posible.
+    </p>
+    <p class="thanks">
+      ¡Gracias por elegir Motos S.L.! Estamos emocionados de ser parte de tu aventura sobre dos ruedas.
+    </p>
+    <!-- Añadimos un botón de acción en el Hero -->
+    <a routerLink="/productos" class="btn-hero">Explorar Catálogo</a>
+  </div>
+</section>
+
+<!-- 2. CATEGORÍAS RÁPIDAS -->
+<section class="categories-section">
+  <div class="container">
+    <div class="category-card">
+      <span class="cat-icon">🏍️</span>
+      <h3>Motos Nuevas</h3>
+      <a routerLink="/productos">Ver más</a>
+    </div>
+    <div class="category-card">
+      <span class="cat-icon">🛠️</span>
+      <h3>Taller Oficial</h3>
+      <a routerLink="/contacto">Pedir Cita</a>
+    </div>
+    <div class="category-card">
+      <span class="cat-icon">🧥</span>
+      <h3>Accesorios</h3>
+      <a routerLink="/productos">Equipamiento</a>
+    </div>
+  </div>
+</section>
+
+<!-- 3. PRODUCTOS DESTACADOS -->
+<section class="featured-products">
+  <div class="container">
+    <h2 class="section-title">Modelos Destacados</h2>
+    <p class="section-subtitle">Échale un vistazo a las joyas de nuestra corona. Unidades limitadas en exposición.</p>
+
+    <div class="products-grid">
+      <article class="product-card" *ngFor="let product of featuredProducts">
+        <div
+          class="product-badge"
+          [class.premium]="product.id === 'sport-r-series-600'"
+          [class.oferta]="product.id === 'adventure-explorer-x'"
+        >
+          {{ product.id === 'sport-r-series-600' ? 'Destacado' : 'Oferta' }}
+        </div>
+        <div class="product-image">
+          <img [src]="product.image" [alt]="product.alt">
+        </div>
+        <div class="product-info">
+          <h3>{{ product.name }}</h3>
+          <p class="product-description">{{ product.description }}</p>
+          <div class="product-footer">
+            <span class="product-price">{{ product.price }}</span>
+            <button class="btn-details" [routerLink]="['/productos', product.id]">Ver Detalles</button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="view-all-wrapper">
+      <a routerLink="/productos" class="btn-outline">Ver Todos los Productos</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. LLAMADA A LA ACCIÓN (CTA) -->
+<section class="cta-section">
+  <div class="cta-content">
+    <h2>¿Tu moto necesita un chequeo?</h2>
+    <p>Pide cita en nuestro taller oficial en Palencia. Mecánicos profesionales listos para poner a punto tu máquina.</p>
+    <a routerLink="/contacto" class="btn-cta">Reservar Cita en Taller</a>
+  </div>
+</section>
