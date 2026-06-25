@@ -1,59 +1,97 @@
-# Motos
+# Motos S.L. - Web Corporativa y Catálogo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.25.
+Aplicación web desarrollada con Angular 20 para un concesionario y taller de motos.
 
-## Development server
+Incluye:
 
-To start a local development server, run:
+- Página de inicio con secciones destacadas.
+- Catálogo de motocicletas.
+- Ficha de detalle por producto.
+- Página de contacto con formulario e información de negocio.
+- Secciones legales (aviso legal, privacidad, cookies y condiciones).
 
-```bash
-ng serve
-```
+## Tecnologías
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular 20 (standalone components)
+- Angular Router
+- TypeScript 5.9
+- Karma + Jasmine para tests unitarios
 
-## Code scaffolding
+## Requisitos
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Node.js 20 o superior
+- npm 10 o superior
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Instalación
 
 ```bash
-ng build
+npm install
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Scripts disponibles
 
 ```bash
-ng test
+npm start
+npm run build
+npm run watch
+npm test
 ```
 
-## Running end-to-end tests
+Descripción rápida:
 
-For end-to-end (e2e) testing, run:
+- `npm start`: lanza el servidor de desarrollo en `http://localhost:4200`.
+- `npm run build`: genera build de producción en `dist/motos`.
+- `npm run watch`: build en modo observación para desarrollo.
+- `npm test`: ejecuta pruebas unitarias con Karma.
 
-```bash
-ng e2e
+## Rutas principales
+
+- `/` - Inicio
+- `/nosotros` - Sobre la empresa
+- `/productos` - Catálogo
+- `/productos/:id` - Detalle de producto
+- `/contacto` - Contacto
+- `/legal/aviso-legal` - Aviso legal
+- `/legal/condiciones` - Condiciones de venta
+- `/legal/privacidad` - Política de privacidad
+- `/legal/cookies` - Política de cookies
+
+## Estructura del proyecto
+
+```text
+src/
+	app/
+		components/
+			header/
+			footer/
+		pages/
+			home/
+			about/
+			products/
+			product-detail/
+			contact/
+			legal/
+				aviso/
+				condiciones/
+				cookies/
+				politicaprivacidad/
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Datos del catálogo:
 
-## Additional Resources
+- El catálogo está centralizado en `src/app/pages/products/products.data.ts`.
+- El detalle de producto utiliza el parámetro de ruta `:id`.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Assets
+
+Las imágenes estáticas se encuentran en `public/img` y se sirven como recursos públicos de la app.
+
+## Estado actual del proyecto
+
+- Build de producción: correcto (`npm run build`).
+- Tests unitarios: correctos (`npm test -- --watch=false --browsers=ChromeHeadless`).
+- Formulario de contacto: validación en cliente y envío mediante cliente de correo (`mailto`).
+
+## Autoría
+
+Proyecto base generado con Angular CLI y adaptado para la web de Motos S.L.
